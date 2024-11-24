@@ -1,4 +1,4 @@
-# DGPref: Implementation for [Decompose and Leverage Preferences from Expert Models for Improving Trustworthiness of MLLMs](https://arxiv.org/pdf/2411.13697)
+# DGPref (TBD!!!): Implementation for [Decompose and Leverage Preferences from Expert Models for Improving Trustworthiness of MLLMs](https://arxiv.org/pdf/2411.13697)
 
 ## Overview
 
@@ -11,7 +11,7 @@
 - [Dataset Preparation](#dataset-preparation)
 - [Experiment Setting](#experiment-setting)
 - [Preference Data Generation](#preference-data-generation)
-- [Model Training](#model-training)
+- [Model Training](#model-training) (TBD!!!)
 
 ## Dataset Preparation
 In order to replicate the code and performance, you need to prepare two-fold of data: 1) data for generating preference data; and 2) data for evaluation.
@@ -75,3 +75,6 @@ Then, DPO training can be conducted with:
 python Fine_Grained_Alignment/src/main.py --micro_batch_size 4 --SAVE_NUM 4 --gen_step 1500 --gen_start 300 --eval_step 1500 --lora_r 8 --learning_rate 5e-7  --num_epochs 6 --batch_size 8  --CONSIDERED_ASPECTS [YOUR_CONCERNED_ASPECTS] --HAL_DATASETS 'amber,mmhal,objhal' 
 ```
 **You can always use the DEBUG mode (set --DEBUG True) for easier debugging~**
+
+## Provided Data
+You can refer to this link to our [Google Drive](https://drive.google.com/drive/folders/1rCZuOoBIQCAFaMvX8ujYYFG15k5iKvOZ?usp=sharing) shared files to avoid generating data (base MLLM generated detailed captions, preference dataset, log probability of reference MLLMs).
