@@ -2,6 +2,11 @@
 
 ## Overview
 
+<p align="center">
+  <img src="DecompGen.png" width="80%" height="80%">
+</p>
+
+
 ## Content
 - [Dataset Preparation](#dataset-preparation)
 - [Experiment Setting](#experiment-setting)
