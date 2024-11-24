@@ -1,0 +1,39 @@
+You are a expert writer. Given a textual description ([DESP]), your goal is to extract the visible entities ([ENT]) in description. Entities should inlcude objects, people, animals and extracted entites are separated with commas. Some examples are provided below:
+
+[DESP]: The image features a woman standing in a kitchen, preparing food. She is smiling and seems to be enjoying the cooking process. The kitchen is well-equipped with various appliances such as ovens, a microwave, and a sink.
+
+On the counter, there's a bowl and an assortment of items, including a cup, a few bottles, a couple of bowls, and a spoon. A chair is also visible in the scene. The woman is wearing a white shirt and blue jeans, adding a casual and friendly touch to the image
+[ENT]: (woman, kitchen, food, oven, microwave, sink, bowl, cup, bottle, bowl, spoon, chair, shirt, jeans)
+
+[DESP]: The image displays a baseball game in progress, with a batter taking a swing at an incoming pitch. The batter's baseball bat is close to the ground, as he is in the process of making contact with the ball. The scene is dynamic and action-packed.
+
+In addition to the batter, there are several other players on the field, including two teammates close to the batter, and three more players in the background. Some players are positioned near the pitcher, while others are scattered across the field.
+
+Other baseball equipment can be spotted in the scene, such as a baseball glove and
+[ENT]: (batter, baseball bat, ball, player, pitcher, baseball glove)
+
+[DESP]: The image features a large pan with a single slice of pizza, loaded with toppings such as olives, mushrooms, and cheese. The pizza slice is placed in the middle of the pan, occupying a significant portion of the serving area. The close-up view of the pizza slice emphasizes its delicious toppings and overall presentation.
+[ENT]: (pan, pizza, olives, mushroom, cheese)
+
+[DESP]: The image displays a tasty-looking sandwich placed in a styrofoam container, accompanied by a side of sauce in a separate plastic container. The sandwich is cut in half, making it easy to eat and enjoy. There are two sandwiches in the scene, with one slightly larger than the other. 
+
+Various carrots can be seen in the image, including some that are placed on and near the sandwiches. The carrots are scattered around the container, adding a vibrant touch to the scene.
+[ENT]: (sandwich, container, sauce, carrot)
+
+[DESP]: The image portrays a city street with a black SUV parked along the sidewalk. There are a few people in the scene, including a man standing near the parked car, and two other individuals further away from the car. 
+
+The street is surrounded by trees, providing a pleasant atmosphere. There are also some traffic signs visible, indicating that the area might be a designated parking zone. The overall scene depicts a typical urban setting with parked vehicles and pedestrians going about their day.
+[ENT]: (city street, SUV, sidewalk, people, man, tree, traffic sign, vehicle, pedestrain)
+
+[DESP]: In the image, a man is standing outside a large clock tower, seemingly posing or admiring the impressive structure. The tower features a massive clock face with Roman numerals, which is visible in the foreground. The man is positioned on the left side of the clock tower.
+
+Additionally, there is another clock located further down the tower, although it is not as prominent as the main clock face. The man appears to be the primary focus of the scene, with the clock tower serving as a backdrop for the picture.
+[ENT]: (man, clock tower, Roman numeral, clock)
+
+[DESP]: The image showcases a beautiful aerial view of a large lake and an island in the middle of the water. The airplane wing is in the foreground, covering most of the image and occupying the left side. The wing's angle and positioning provide a sense of perspective, emphasizing the vastness of the lake and island. The clear sky and sunlight highlight the picturesque scene.
+[ENT]: (lake, island, water, airplane, wing's angle, sky, sun light)
+
+[DESP]: The image features a scene of a person riding a horse in a body of water, likely a river. The horse and rider are the main focus of the scene. The water is flowing beneath them, providing a unique setting for the activity. The horse seems to be enjoying the water as the rider sits on its back, ready to continue their journey. The rider is wearing a helmet, ensuring their safety while crossing the body of water.
+[ENT]: (person, horse, water, river, rider, helmet)
+
+Please extract [ENT] of this [DESP]: 

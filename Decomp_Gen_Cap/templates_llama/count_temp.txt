@@ -1,0 +1,43 @@
+You are a expert writer. Given a textual description ([DESP]), your goal is to extract the counting of objects ([COUNT]), in the format of tuples (number, OBJ). If the number is one, there is no need for extraction. Avoid implicit counting, like several, a few, a group of, etc. If no counting involved in the description, please respond NONE. Some examples are provided below:
+
+[DESP]: The image features two blue plastic lawn chairs on a sidewalk, placed under a large umbrella. The chairs are placed close together, and the umbrella provides shade from above. Both chairs are accompanied by bags, likely containing personal items or belongings.
+
+The sidewalk is adorned with potted plants and small trees, creating a pleasant atmosphere for relaxation. There are five potted plants visible in the image, some placed closer to the chairs and others extending further down the sidewalk.
+[COUNT]: (five, potted plants)
+
+[DESP]: The image captures a beautiful night scene in a city, featuring a large building with a clock tower. The building has a prominent clock on its side, which stands out against the dark sky. The clock tower is part of a building with columns, giving it an impressive architectural look. 
+
+In addition to the clock tower, there are two more clocks visible in the scene. A bench can be seen in the foreground, providing a place for people to sit and enjoy the view. The night sky above the cityscape gives the scene an atmospheric ambiance.
+[COUNT]: (three, clocks)
+
+[DESP]: The image features a hospital room containing two beds, with one of them being a cot. The beds are positioned next to each other. The room also has a chair placed nearby, close to the beds. Additionally, there are four pillows on the beds, providing comfort to the patients.
+
+There are two people in the room, one standing close to the left bed and the other near the right bed. The room appears to be organized and ready for use, with all necessary furniture and accessories in place.
+[COUNT]: (two, beds); (four, pillow); (two, people)
+
+[DESP]: The image features a large public transit bus driving down a city street, possibly in a park setting. The bus is situated in the middle of the scene, with a traffic light visible close to the bus.
+
+There are several cars on the street, with one on the left side of the bus and three more on the right side. In addition to the vehicles, there is a person walking along the sidewalk, and another individual closer to the right side of the scene.
+
+A fire hydrant can be seen near the bus and another one further down the street, adding to the urban setting.
+[COUNT]: (two, fire hydrant)
+
+[DESP]: The image depicts a horse grazing on grass in a field, surrounded by a tall fence. The horse is positioned towards the center of the scene, and it appears to be enjoying the fresh green grass. The fence is visible on the left and right sides of the horse, as well as on the top, creating a secure enclosure for the animal.
+[COUNT]: None
+
+[DESP]: The image displays an open and well-lit indoor space. At the center of the scene, a dining table is set with a variety of objects. There are multiple chairs surrounding the table, with one on each side and one in the foreground. Additionally, there is a chair in the background and another one in the middle of the room.
+
+Among the items placed on the table are a wine glass and a bowl, suggesting that it is set up for a meal or gathering. The scene also features several bottles, including one on the left side of the table and two more on the right
+[COUNT]: (three, bottle)
+
+[DESP]: The image is a group picture of people gathered together on a beach. They are sitting around a dining table, which is placed in the middle of the scene. Various items are scattered across the table, including bottles, cups, and a knife. 
+
+There are several chairs placed around the table, as well as a few umbrellas set up nearby. Some people are sitting on chairs, while others are standing around the table. The atmosphere appears to be joyful and social, with people spending time together on a beautiful beach day.
+[COUNT]: NONE
+
+[DESP]: In the image, there are two police officers riding on the back of horses. They are positioned in front of a large building and seem to be walking down a road. The officers appear to be patrolling the street or providing a visible presence for the community.
+
+The scene also includes a bus driving behind the officers on the left side. Additionally, there are two cars visible in the image: one car is located at the far right side of the scene, and the other car is near the right edge of the photo. A person can also be seen standing near the right edge of the image, possibly observing the officers
+[COUNT]: (two, police officer); (two, car)
+
+Please extract [COUNT] of this [DESP]: 

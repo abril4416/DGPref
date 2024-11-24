@@ -1,0 +1,472 @@
+VQA_PATH : /common/home/users/r/ruicao.2020/common2/Data_Storage/Rui_Data_Space/VQA
+DATA_NAME : vsg
+GEN_DATASETS : vsg
+HAL_DATASETS : objhal,mmhal,amber
+MODEL_NAME : llava-hf/llava-1.5-7b-hf
+SEED : 1111
+SAVE_NUM : 98
+INFERENCE_BATCH : 12
+NEG_WORD : Yes
+POS_WORD : No
+MAX_LEN : 100
+CONSIDERED_ASPECTS : object,count,attribute,spatial,scale,text
+PUNISH_SHORT : False
+HALF_VSG : False
+USE_BOTH : False
+dpo_training : True
+dpo_use_average : False
+dpo_token_weighted : False
+dpo_token_weight : 1.0
+dpo_beta : 0.1
+load_8bit : False
+batch_size : 8
+infer_batch_size : 12
+micro_batch_size : 4
+logging_steps : 68
+save_total_limit : 5
+warmup_steps : 100
+num_epochs : 2
+learning_rate : 5e-06
+cutoff_len : 256
+use_gradient_checkpointing : False
+group_by_length : False
+fp16 : True
+init_from_checkpoint : False
+lora_checkpoint_dir : /common/home/users/r/ruicao.2020/Rui_Code_Space/vqa/safe_saved_lora_llava
+lora_checkpoint_file : checkpoint-60300
+lora_r : 32
+lora_alpha : 32
+lora_dropout : 0.05
+target_modules : .*language_model.*\.(q_proj|v_proj)
+temperature : 0.0
+top_p : 0.75
+top_k : 40
+num_beams : 4
+max_new_tokens : 1024
+eval_step : 4500
+gen_step : 4500
+gen_start : 9000
+val_set_size : 500
+save_step : 500
+output_dir : ../../rlhf_models
+resume_from_checkpoint : None
+DEBUG : False
+GPT_ADV_VAL : False
+GT_OBJ : False
+PARTIAL_POSNEG : False
+Length of training set: 51989, length of testing set: 977
+Batch size: 8, Gradient accumulation: 2
+Number of device: 1
+Training batch size: 4
+Total training batch size: 8
+Total number of epochs: 2
+	Length of train dataloader: 12998
+	Number of iterations per epoch: 6499
+	Number of instances: 51989
+	Total number of iterations: 12998
+	Accelerate: 1
+Padding token id: 0
+Epoch: 1 out of 2
+	Iterations in total 12998
+	Iteration 68
+	Loss: 0.95, learning rate: 0.000003
+	Iteration 136
+	Loss: 0.93, learning rate: 0.000005
+	Iteration 204
+	Loss: 1.06, learning rate: 0.000005
+	Iteration 272
+	Loss: 0.98, learning rate: 0.000005
+	Iteration 340
+	Loss: 1.11, learning rate: 0.000005
+	Iteration 408
+	Loss: 0.87, learning rate: 0.000005
+	Iteration 476
+	Loss: 0.86, learning rate: 0.000005
+	Iteration 544
+	Loss: 0.84, learning rate: 0.000005
+	Iteration 612
+	Loss: 0.70, learning rate: 0.000005
+	Iteration 680
+	Loss: 0.95, learning rate: 0.000005
+	Iteration 748
+	Loss: 0.91, learning rate: 0.000005
+	Iteration 816
+	Loss: 0.99, learning rate: 0.000005
+	Iteration 884
+	Loss: 0.88, learning rate: 0.000005
+	Iteration 952
+	Loss: 0.86, learning rate: 0.000005
+	Iteration 1020
+	Loss: 0.76, learning rate: 0.000005
+	Iteration 1088
+	Loss: 0.85, learning rate: 0.000005
+	Iteration 1156
+	Loss: 0.94, learning rate: 0.000005
+	Iteration 1224
+	Loss: 0.93, learning rate: 0.000005
+	Iteration 1292
+	Loss: 0.97, learning rate: 0.000005
+	Iteration 1360
+	Loss: 0.89, learning rate: 0.000005
+	Iteration 1428
+	Loss: 0.91, learning rate: 0.000004
+	Iteration 1496
+	Loss: 0.88, learning rate: 0.000004
+	Iteration 1564
+	Loss: 0.85, learning rate: 0.000004
+	Iteration 1632
+	Loss: 0.70, learning rate: 0.000004
+	Iteration 1700
+	Loss: 0.75, learning rate: 0.000004
+	Iteration 1768
+	Loss: 0.87, learning rate: 0.000004
+	Iteration 1836
+	Loss: 1.04, learning rate: 0.000004
+	Iteration 1904
+	Loss: 0.81, learning rate: 0.000004
+	Iteration 1972
+	Loss: 0.78, learning rate: 0.000004
+	Iteration 2040
+	Loss: 0.87, learning rate: 0.000004
+	Iteration 2108
+	Loss: 0.65, learning rate: 0.000004
+	Iteration 2176
+	Loss: 0.87, learning rate: 0.000004
+	Iteration 2244
+	Loss: 1.02, learning rate: 0.000004
+	Iteration 2312
+	Loss: 0.86, learning rate: 0.000004
+	Iteration 2380
+	Loss: 0.79, learning rate: 0.000004
+	Iteration 2448
+	Loss: 0.84, learning rate: 0.000004
+	Iteration 2516
+	Loss: 0.79, learning rate: 0.000004
+	Iteration 2584
+	Loss: 0.93, learning rate: 0.000004
+	Iteration 2652
+	Loss: 0.82, learning rate: 0.000004
+	Iteration 2720
+	Loss: 0.77, learning rate: 0.000004
+	Iteration 2788
+	Loss: 0.75, learning rate: 0.000004
+	Iteration 2856
+	Loss: 0.74, learning rate: 0.000004
+	Iteration 2924
+	Loss: 0.63, learning rate: 0.000004
+	Iteration 2992
+	Loss: 0.76, learning rate: 0.000004
+	Iteration 3060
+	Loss: 0.78, learning rate: 0.000004
+	Iteration 3128
+	Loss: 0.70, learning rate: 0.000004
+	Iteration 3196
+	Loss: 0.78, learning rate: 0.000004
+	Iteration 3264
+	Loss: 0.73, learning rate: 0.000004
+	Iteration 3332
+	Loss: 0.85, learning rate: 0.000004
+	Iteration 3400
+	Loss: 0.71, learning rate: 0.000004
+	Iteration 3468
+	Loss: 0.97, learning rate: 0.000004
+	Iteration 3536
+	Loss: 0.90, learning rate: 0.000004
+	Iteration 3604
+	Loss: 0.83, learning rate: 0.000004
+	Iteration 3672
+	Loss: 0.78, learning rate: 0.000004
+	Iteration 3740
+	Loss: 0.78, learning rate: 0.000004
+	Iteration 3808
+	Loss: 0.80, learning rate: 0.000004
+	Iteration 3876
+	Loss: 0.87, learning rate: 0.000004
+	Iteration 3944
+	Loss: 0.84, learning rate: 0.000004
+	Iteration 4012
+	Loss: 0.72, learning rate: 0.000003
+	Iteration 4080
+	Loss: 0.84, learning rate: 0.000003
+	Iteration 4148
+	Loss: 0.71, learning rate: 0.000003
+	Iteration 4216
+	Loss: 0.76, learning rate: 0.000003
+	Iteration 4284
+	Loss: 0.96, learning rate: 0.000003
+	Iteration 4352
+	Loss: 0.90, learning rate: 0.000003
+	Iteration 4420
+	Loss: 0.77, learning rate: 0.000003
+	Iteration 4488
+	Loss: 1.01, learning rate: 0.000003
+Iteration 4500, evaluation...
+	Eval loss: 0.72, runtime 106.78
+	Iteration 4556
+	Loss: 0.88, learning rate: 0.000003
+	Iteration 4624
+	Loss: 0.69, learning rate: 0.000003
+	Iteration 4692
+	Loss: 0.67, learning rate: 0.000003
+	Iteration 4760
+	Loss: 0.66, learning rate: 0.000003
+	Iteration 4828
+	Loss: 0.82, learning rate: 0.000003
+	Iteration 4896
+	Loss: 0.64, learning rate: 0.000003
+	Iteration 4964
+	Loss: 0.68, learning rate: 0.000003
+	Iteration 5032
+	Loss: 0.88, learning rate: 0.000003
+	Iteration 5100
+	Loss: 0.77, learning rate: 0.000003
+	Iteration 5168
+	Loss: 0.57, learning rate: 0.000003
+	Iteration 5236
+	Loss: 0.79, learning rate: 0.000003
+	Iteration 5304
+	Loss: 0.76, learning rate: 0.000003
+	Iteration 5372
+	Loss: 0.80, learning rate: 0.000003
+	Iteration 5440
+	Loss: 0.73, learning rate: 0.000003
+	Iteration 5508
+	Loss: 0.81, learning rate: 0.000003
+	Iteration 5576
+	Loss: 0.80, learning rate: 0.000003
+	Iteration 5644
+	Loss: 0.77, learning rate: 0.000003
+	Iteration 5712
+	Loss: 0.73, learning rate: 0.000003
+	Iteration 5780
+	Loss: 0.99, learning rate: 0.000003
+	Iteration 5848
+	Loss: 0.81, learning rate: 0.000003
+	Iteration 5916
+	Loss: 0.72, learning rate: 0.000003
+	Iteration 5984
+	Loss: 0.73, learning rate: 0.000003
+	Iteration 6052
+	Loss: 0.76, learning rate: 0.000003
+	Iteration 6120
+	Loss: 0.71, learning rate: 0.000003
+	Iteration 6188
+	Loss: 0.67, learning rate: 0.000003
+	Iteration 6256
+	Loss: 0.88, learning rate: 0.000003
+	Iteration 6324
+	Loss: 0.80, learning rate: 0.000003
+	Iteration 6392
+	Loss: 0.65, learning rate: 0.000003
+	Iteration 6460
+	Loss: 0.64, learning rate: 0.000003
+Epoch: 2 out of 2
+	Iterations in total 12998
+	Iteration 6528
+	Loss: 0.67, learning rate: 0.000003
+	Iteration 6596
+	Loss: 0.62, learning rate: 0.000002
+	Iteration 6664
+	Loss: 0.85, learning rate: 0.000002
+	Iteration 6732
+	Loss: 0.79, learning rate: 0.000002
+	Iteration 6800
+	Loss: 0.76, learning rate: 0.000002
+	Iteration 6868
+	Loss: 0.67, learning rate: 0.000002
+	Iteration 6936
+	Loss: 0.63, learning rate: 0.000002
+	Iteration 7004
+	Loss: 0.56, learning rate: 0.000002
+	Iteration 7072
+	Loss: 0.54, learning rate: 0.000002
+	Iteration 7140
+	Loss: 0.66, learning rate: 0.000002
+	Iteration 7208
+	Loss: 0.70, learning rate: 0.000002
+	Iteration 7276
+	Loss: 0.62, learning rate: 0.000002
+	Iteration 7344
+	Loss: 0.69, learning rate: 0.000002
+	Iteration 7412
+	Loss: 0.59, learning rate: 0.000002
+	Iteration 7480
+	Loss: 0.66, learning rate: 0.000002
+	Iteration 7548
+	Loss: 0.69, learning rate: 0.000002
+	Iteration 7616
+	Loss: 0.73, learning rate: 0.000002
+	Iteration 7684
+	Loss: 0.65, learning rate: 0.000002
+	Iteration 7752
+	Loss: 0.68, learning rate: 0.000002
+	Iteration 7820
+	Loss: 0.86, learning rate: 0.000002
+	Iteration 7888
+	Loss: 0.77, learning rate: 0.000002
+	Iteration 7956
+	Loss: 0.77, learning rate: 0.000002
+	Iteration 8024
+	Loss: 0.72, learning rate: 0.000002
+	Iteration 8092
+	Loss: 0.57, learning rate: 0.000002
+	Iteration 8160
+	Loss: 0.56, learning rate: 0.000002
+	Iteration 8228
+	Loss: 0.66, learning rate: 0.000002
+	Iteration 8296
+	Loss: 0.76, learning rate: 0.000002
+	Iteration 8364
+	Loss: 0.90, learning rate: 0.000002
+	Iteration 8432
+	Loss: 0.59, learning rate: 0.000002
+	Iteration 8500
+	Loss: 0.70, learning rate: 0.000002
+	Iteration 8568
+	Loss: 0.67, learning rate: 0.000002
+	Iteration 8636
+	Loss: 0.57, learning rate: 0.000002
+	Iteration 8704
+	Loss: 0.68, learning rate: 0.000002
+	Iteration 8772
+	Loss: 0.95, learning rate: 0.000002
+	Iteration 8840
+	Loss: 0.63, learning rate: 0.000002
+	Iteration 8908
+	Loss: 0.73, learning rate: 0.000002
+	Iteration 8976
+	Loss: 0.59, learning rate: 0.000002
+Iteration 9000, evaluation...
+	Eval loss: 0.70, runtime 106.77
+Hallucination chair eval: objhal
+	Chair_s 10.33, Chair_i 2.59
+Hallucination chair eval: mmhal
+	Chair_s 0.00, Chair_i 0.00
+Hallucination chair eval: amber
+	Chair_s 51.20, Chair_i 1.20
+	Iteration 9044
+	Loss: 0.80, learning rate: 0.000002
+	Iteration 9112
+	Loss: 0.83, learning rate: 0.000002
+	Iteration 9180
+	Loss: 0.66, learning rate: 0.000001
+	Iteration 9248
+	Loss: 0.70, learning rate: 0.000001
+	Iteration 9316
+	Loss: 0.56, learning rate: 0.000001
+	Iteration 9384
+	Loss: 0.57, learning rate: 0.000001
+	Iteration 9452
+	Loss: 0.60, learning rate: 0.000001
+	Iteration 9520
+	Loss: 0.55, learning rate: 0.000001
+	Iteration 9588
+	Loss: 0.69, learning rate: 0.000001
+	Iteration 9656
+	Loss: 0.60, learning rate: 0.000001
+	Iteration 9724
+	Loss: 0.63, learning rate: 0.000001
+	Iteration 9792
+	Loss: 0.77, learning rate: 0.000001
+	Iteration 9860
+	Loss: 0.73, learning rate: 0.000001
+	Iteration 9928
+	Loss: 0.68, learning rate: 0.000001
+	Iteration 9996
+	Loss: 0.82, learning rate: 0.000001
+	Iteration 10064
+	Loss: 0.79, learning rate: 0.000001
+	Iteration 10132
+	Loss: 0.80, learning rate: 0.000001
+	Iteration 10200
+	Loss: 0.67, learning rate: 0.000001
+	Iteration 10268
+	Loss: 0.70, learning rate: 0.000001
+	Iteration 10336
+	Loss: 0.82, learning rate: 0.000001
+	Iteration 10404
+	Loss: 0.79, learning rate: 0.000001
+	Iteration 10472
+	Loss: 0.65, learning rate: 0.000001
+	Iteration 10540
+	Loss: 0.69, learning rate: 0.000001
+	Iteration 10608
+	Loss: 0.69, learning rate: 0.000001
+	Iteration 10676
+	Loss: 0.70, learning rate: 0.000001
+	Iteration 10744
+	Loss: 0.75, learning rate: 0.000001
+	Iteration 10812
+	Loss: 0.79, learning rate: 0.000001
+	Iteration 10880
+	Loss: 0.80, learning rate: 0.000001
+	Iteration 10948
+	Loss: 0.91, learning rate: 0.000001
+	Iteration 11016
+	Loss: 0.87, learning rate: 0.000001
+	Iteration 11084
+	Loss: 0.72, learning rate: 0.000001
+	Iteration 11152
+	Loss: 0.61, learning rate: 0.000001
+	Iteration 11220
+	Loss: 0.56, learning rate: 0.000001
+	Iteration 11288
+	Loss: 0.72, learning rate: 0.000001
+	Iteration 11356
+	Loss: 0.58, learning rate: 0.000001
+	Iteration 11424
+	Loss: 0.60, learning rate: 0.000001
+	Iteration 11492
+	Loss: 0.74, learning rate: 0.000001
+	Iteration 11560
+	Loss: 0.70, learning rate: 0.000001
+	Iteration 11628
+	Loss: 0.56, learning rate: 0.000001
+	Iteration 11696
+	Loss: 0.65, learning rate: 0.000001
+	Iteration 11764
+	Loss: 0.80, learning rate: 0.000000
+	Iteration 11832
+	Loss: 0.65, learning rate: 0.000000
+	Iteration 11900
+	Loss: 0.78, learning rate: 0.000000
+	Iteration 11968
+	Loss: 0.62, learning rate: 0.000000
+	Iteration 12036
+	Loss: 0.75, learning rate: 0.000000
+	Iteration 12104
+	Loss: 0.69, learning rate: 0.000000
+	Iteration 12172
+	Loss: 0.70, learning rate: 0.000000
+	Iteration 12240
+	Loss: 0.84, learning rate: 0.000000
+	Iteration 12308
+	Loss: 0.81, learning rate: 0.000000
+	Iteration 12376
+	Loss: 0.71, learning rate: 0.000000
+	Iteration 12444
+	Loss: 0.73, learning rate: 0.000000
+	Iteration 12512
+	Loss: 0.63, learning rate: 0.000000
+	Iteration 12580
+	Loss: 0.73, learning rate: 0.000000
+	Iteration 12648
+	Loss: 0.61, learning rate: 0.000000
+	Iteration 12716
+	Loss: 0.64, learning rate: 0.000000
+	Iteration 12784
+	Loss: 0.89, learning rate: 0.000000
+	Iteration 12852
+	Loss: 0.67, learning rate: 0.000000
+	Iteration 12920
+	Loss: 0.54, learning rate: 0.000000
+	Iteration 12988
+	Loss: 0.62, learning rate: 0.000000
+
+
+Training completed. Do not forget to share your model on huggingface.co/models =)
+
+
+Maximum epoch: 9000
+	evaluation auc: 10.33, accuracy: 2.59
+Time Consumption: 30227.45

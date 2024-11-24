@@ -1,0 +1,35 @@
+You are a expert writer. Given a textual description ([DESP]), your goal is to extract the described visible attributes of objects ([ATTR]) in the format of tuples (attribute, object). Attributes can include colors, materials, shapes, activities, features and scales. Please make sure the attribute is visible (avoid attributes like: beautiful, delicious, colorful, comfortable, warm, etc). If no attributes extracted, please respond NONE. Some examples are provided below:
+
+[DESP]: The image features a shirtless man standing at the edge of the water, holding a surfboard. He appears to be wearing a tight wetsuit, and the surfboard he holds is prominently visible. The beach is bathed in warm sunlight, creating a pleasant atmosphere for the surfer.
+[ATTR]: (shirtless, man); (standing, man); (tight, wetsuit)
+
+[DESP]: The image shows a dining table with a white plate in the center, containing a delicious pepperoni pizza. The pizza is ready to be eaten, and it is accompanied by a variety of food items. There is a portion of broccoli placed near the pizza, along with a bowl of veggies, adding a nutritious element to the meal. Additionally, there is a cup positioned on the table, possibly containing a beverage like soda.
+
+The table setting is complemented by a chair placed on one side, offering a comfortable spot to enjoy the meal. 
+[ATTR]: (white, plate)
+
+[DESP]: The image features two blue plastic lawn chairs on a sidewalk, placed under a large umbrella. The chairs are placed close together, and the umbrella provides shade from above. Both chairs are accompanied by bags, likely containing personal items or belongings.
+
+The sidewalk is adorned with potted plants and small trees, creating a pleasant atmosphere for relaxation. There are five potted plants visible in the image, some placed closer to the chairs and others extending further down the sidewalk.
+[ATTR]: (blue, lawn chair); (plastic, lawn chair); (large, umbrella); (small, tree)
+
+[DESP]: A dog is sitting on top of a wooden boat, looking out over the water, likely enjoying the view or waiting for its owner to return. The boat is moored in a harbor, with several other boats of varying sizes in the background. These other boats are situated near the main boat where the dog is sitting, making the scene lively and active.
+[ATTR]: (wooden, boat); (sitting, dog); (moored, boat)
+
+[DESP]: The image displays a tasty-looking sandwich placed in a styrofoam container, accompanied by a side of sauce in a separate plastic container. The sandwich is cut in half, making it easy to eat and enjoy. There are two sandwiches in the scene, with one slightly larger than the other. 
+
+Various carrots can be seen in the image, including some that are placed on and near the sandwiches. The carrots are scattered around the container, adding a vibrant touch to the scene.
+[ATTR]: NONE
+
+[DESP]: The image depicts a busy city intersection with a large white bus driving down the street. The street is characterized by tall buildings on both sides, and there are numerous people walking around the area. A yellow taxi cab is also present in the scene, sharing the busy street with the bus.
+
+Several pedestrians can be seen throughout the image, with some walking close to each other, and others spread out at varying distances. A handbag is noticeable with one of the pedestrians, adding to the bustling atmosphere of the city.
+[ATTR]: (large, bus); (white, bus); (tall, building); (yellow, taxi cab)
+
+[DESP]: The image features a woman standing on a beach with her surfboard. She is wearing a pink and black wetsuit, and her surfboard is placed by her side. She has her hand on her head, possibly as a means of checking the waves or preparing for her surfing session. The beach setting appears to be well-suited for water sports like surfing.
+[ATTR]: (pink and black, wetsuit)
+
+[DESP]: The image features a large gray elephant walking in a dirt area alongside a rock wall. The elephant seems to be exploring its surroundings. In addition to the elephant, there is a bird perched in the top right corner of the scene. The area has a mix of dirt, rocks, and a few plants. The overall setting appears to be a natural habitat for the elephant, providing a habitat-like environment for the animal.
+[ATTR]: (large, elephant); (gray, elephant); (walking, elephant); (rock, wall)
+
+Please extract [ATTR] of this [DESP]: 

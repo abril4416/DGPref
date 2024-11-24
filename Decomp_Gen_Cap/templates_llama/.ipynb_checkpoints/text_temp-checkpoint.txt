@@ -1,0 +1,33 @@
+You are a expert writer. Given a textual description ([DESP]), your goal is to extract the mentioned scene text (text in the image) in the description with [TEXT]. Different pieces of scene texts are separated with commas. If no scene text mentioned, please respond NONE. Some examples are provided below:
+
+[DESP]: The image depicts a large green military truck with a camouflage paint, parked in front of a church. Several other trucks are parked around the area, indicating a gathering or event. In total, there are eight trucks visible in the scene, with the main military truck being the largest and most prominent. Some people can be seen in the vicinity of the parked trucks, suggesting that they might be attending the event or assisting in some way.
+[TEXT]: NONE
+
+[DESP]: The image depicts a modern shopping center with sleek, glass-fronted stores lining a spacious, polished stone walkway. Shoppers stroll by, carrying colorful bags, while a few people relax on benches under decorative planters filled with vibrant flowers. The center is bright, illuminated by natural light streaming in from large skylights above.
+
+On the left side of the image, a prominent store entrance features a large sign above the doorway. The sign reads Luxury Fashion in elegant, gold letters against a black background. 
+[TEXT]: (Luxury Fashion)
+
+[DESP]: The image features a large giraffe standing in an open field with a mix of bushes and trees nearby. The giraffe appears to be looking out over the field, possibly searching for food or observing its surroundings. The giraffe's long neck stands out prominently, highlighting its unique features. The field is spacious, providing ample room for the giraffe to roam and interact with its environment.
+[TEXT]: NONE
+
+[DESP]: The image showcases a small blue and white boat anchored on a large lake. The boat is positioned towards the center of the lake, and it appears to be a family-sized boat with a cabin. 
+
+There are two people visible on the deck of the boat, possibly enjoying some time on the water. In the surrounding area, there are a few other boats, with one located closer to the left side and another towards the right. Moreover, there is a car parked on the shoreline, close to the left edge of the image.
+[TEXT]: NONE
+
+[DESP]: The image shows a lively New York City street corner. A green street sign in the foreground reads "Broadway" in bold white letters, with another sign below it indicating "W 42nd St." A large, illuminated billboard on a nearby building advertises a Broadway show, with the text "Phantom of the Opera" in elegant, golden script. On the sidewalk, a small kiosk displays a colorful poster that says NYC Tours and Tickets $25 in red and blue. A yellow taxi passes by, with an ad on its roof that reads "Visit Central Park." The scene is bustling with people and traffic.
+[TEXT]: (Broadway; W 42nd St; Phantom of the Opera; NYC Tours; Tickets $25; Visit Central Park.)
+
+[DESP]: The image captures a serene coastal scene at sunset. The vast expanse of the calm sea stretches out to the horizon, where the sky is painted in soft hues of orange, pink, and purple. Gentle waves lap against a sandy shoreline, where a few scattered seashells and small rocks are visible. The beach is mostly empty, with only a few distant seagulls flying low over the water.
+
+On the right side of the image, a weathered wooden sign is partially embedded in the sand. The sign, painted in faded white letters, reads "Private Beach - No Trespassing." The text stands out against the rustic wood, adding a subtle human element to the otherwise untouched natural scene. The overall atmosphere is tranquil and inviting, with the focus drawn to the quiet message on the sign.
+[TEXT]: (Private Beach - No Trespassing.)
+
+[DESP]: In the image, a young woman is riding a skateboard with her hands in front of her. She is wearing a helmet and knee pads, providing her with safety while performing the activity. The scene takes place in a park-like setting, with greenery surrounding the area. The young skateboarder is enjoying her time outdoors, showcasing her skill and confidence.
+[TEXT]: NONE
+
+[DESP]: The image captures a classic London street on a cloudy day, with historic buildings lining the cobblestone road. Red double-decker buses and black cabs move along the street, while pedestrians, some with umbrellas, walk along the sidewalks. The architecture is a mix of old brick facades and modern glass structures, blending the city's rich history with its contemporary vibe. A traditional black iron lamp post features a decorative sign attached to it, reading Baker Street in bold, white letters on a dark green background. The scene exudes a sense of charm and history, with the "Baker Street" sign anchoring the image in its famous setting.
+[TEXT]: (Baker Street)
+
+Please extract [TEXT] of this [DESP]: 

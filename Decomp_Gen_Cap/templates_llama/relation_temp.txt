@@ -1,0 +1,31 @@
+You are a expert writer. Given a textual description ([DESP]), your goal is to extract the described spatial relations between objects ([RELA]) in the format of triplets (subject, relation, object). The relations cover spatial relations and actions. For instance, a cat to the left of a dog can be represented as (cat, to the left of, dog); a man holding an umbrella can be represented as (man, holding, umbrella). Make sure there is no adjectives for either subjects or objects. If no relations involved, please respond NONE. Some examples are provided below:
+
+[DESP]: The image showcases a kitchen counter with a variety of oranges and a juicer in the foreground. There are several oranges arranged on the counter in different positions, with some closer to the front and others further back. The juicer is prominently placed on the counter, ready to be used to extract fresh orange juice. In addition to the juicer and oranges, a bottle can be seen placed near the edge of the counter.
+[RELA]: (orange, on, counter); (bottle, near the edge of, counter)
+
+[DESP]: The image shows a red and white train traveling on a set of train tracks. The train is located near the center of the scene and is quite prominent as it moves along the tracks. There are a couple of trucks visible in the image, one on the left side and another on the right side of the frame. Two traffic lights can also be seen - one close to the truck on the left and the other near the left edge of the image. Additionally, a person is present in the scene, standing near the center-left area of the image.
+[RELA]: (train, on, train tracks); (truck, on left side of, frame); (truck, on right side of, frame); (traffic light, close to, truck); (traffic light, near the left edge of, frame); (person, center-left of, image)
+
+[DESP]: The image portrays a group of people riding horses along a path, with some of them wearing hats. In total, there are at least five people and six horses visible on the road. The horses are spread out across the scene, with some closer to the left side, others near the center, and a few more towards the right side. The riders are in various positions, some in the foreground, and others further back, all enjoying their horseback riding experience together.
+[RELA]: (horse, on, road); (horse, left side of, image); (horse, center of, image); (horse, right of, image); (people, riding, horse); (people, wearing, hat)
+
+[DESP]: The image showcases a man in a red jacket and grey pants standing in a snow-covered area. He is holding ski poles and has skis on, ready for skiing. The man appears to be enjoying his time on the slopes. The scene seems to be captured during a winter day, with the man being the main focus.
+[RELA]: (man, holding, ski poles)
+
+[DESP]: The image displays a dining table with a variety of food items arranged on it. There are three plate trays filled with different types of food, including sandwiches, vegetables, and some other dishes. The sandwiches are spread across the plates, with one on the left side, one in the middle, and another on the far right.
+
+In addition to the sandwiches, there are multiple carrots, with two on the left side, one in the middle, and another on the far right corner. There are also two bottles on the table, one towards the upper left corner
+[RELA]: (food, on, dining table); (sandwiches, left of, plate); (sandwiches, in the middle of, plate); (sandwiches, right of, plate); (bottle, on, table); (bottle, left corner of, table)
+
+[DESP]: The image features a cat standing on a tiled floor in a bathroom. The cat is looking down, possibly intrigued by an object on the floor. The bathroom has a sink nearby, and the floor is adorned with a mosaic tile pattern. The cat appears to be relaxed in the bathroom environment.
+[RELA]: (cat, on, floor)
+
+[DESP]: The image displays a blue and gold military airplane parked on a runway. It is the main focus of the scene, with its impressive size and color scheme. There is a person standing near the back of the airplane, possibly a member of the air force or an technician.
+
+In the background, there is another airplane, which appears to be slightly smaller and located further away. A truck can be seen on the right side of the image, possibly used for maintenance or support purposes. The overall setting suggests an active military airfield or base.
+[RELA]: (person, back of, airplane); (truck, right of, image)
+
+[DESP]: The image shows a red and white train traveling on a set of train tracks. The train is located near the center of the scene and is quite prominent as it moves along the tracks. There are a couple of trucks visible in the image, one on the left side and another on the right side of the frame. Two traffic lights can also be seen - one close to the truck on the left and the other near the left edge of the image. Additionally, a person is present in the scene, standing near the center-left area of the image.
+[RELA]: (train, on, train tracks); (truck, on left side of, frame); (truck, on right side of, frame); (traffic light, close to, truck); (traffic light, near the left edge of, frame); (person, center-left of, image)
+
+Please extract relations ([RELA]) of this [DESP]: 
