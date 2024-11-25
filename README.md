@@ -60,13 +60,13 @@ Essential requirements are listed in [essential_requirement.txt](https://github.
    ```
    python Decomp_Gen_Cap/src/meta_llama3_extract.py --GQA_PATH [YOUR_FILE_PATH] --target_file [YOU_GENERATED_CAPTION_PATH]
    ```
-   The decomposed results can be found in [decomp_results_llava_vsg_0.25/all_vsg_llama3.pkl](https://drive.google.com/drive/folders/1rCZuOoBIQCAFaMvX8ujYYFG15k5iKvOZ?usp=sharing)
+   The decomposed results can be found in [decomp_results_llava_vsg_0.25/all_vsg_llama3.pkl](https://drive.google.com/drive/folders/1rCZuOoBIQCAFaMvX8ujYYFG15k5iKvOZ?usp=sharing).
 4. Assign decomposed results to proper experts for evaluation and generate expert scores; Execute:
    ```
    python Decomp_Gen_Cap/src/program_to_tool.py
    ```
    Make sure your paths are set corretly.
-   The execution results can be found in [decomp_results_llava_vsg_0.25/expert_check_scores.pkl](https://drive.google.com/drive/folders/1rCZuOoBIQCAFaMvX8ujYYFG15k5iKvOZ?usp=sharing)
+   The execution results can be found in [decomp_results_llava_vsg_0.25/expert_check_scores.pkl](https://drive.google.com/drive/folders/1rCZuOoBIQCAFaMvX8ujYYFG15k5iKvOZ?usp=sharing).
 6. Use the expert scores to generate paired preferred and rejected data; Execute:
    ```
    python Fine_Grained_Alignment/src/pref_data_gen.py --CONSIDERED_ASPECTS [YOUR_CONCERNED_ASPECTS]  --MODEL_NAME [YOUR_MODEL] --DATA_NAME "[VSG or COCO or Other Image Sources] --raw_gen_file [YOU_GENERATED_CAPTION_PATH] --expert_score_file [EXPERT_EXECUTION_RESULT]
@@ -79,6 +79,7 @@ After generating the preference data, you can conduct direct preference optimiza
 python Fine_Grained_Alignment/src/logp_gen_for_pairs.py --MODEL_NAME [YOUR_MODEL] --CONSIDERED_ASPECTS [YOUR_CONCERNED_ASPECTS] --DATA_NAME "[VSG or COCO or Other Image Sources]
 ```
 for generating the log probabilities.
+We provide the log probability of both LLaVA and QWen-VL-Chat [here](https://drive.google.com/drive/folders/1rCZuOoBIQCAFaMvX8ujYYFG15k5iKvOZ?usp=sharing).
 Then, DPO training for LLaVA can be conducted with:
 ```
 python Fine_Grained_Alignment/src/main.py --micro_batch_size 4 --gen_step 4500 --gen_start 9000 --eval_step 4500 --lora_r 32 --lora_alpha 32 --learning_rate 5e-6 --num_epochs 2 --batch_size 8  --CONSIDERED_ASPECTS "object,count,attribute,spatial,scale,text" --HAL_DATASETS "objhal,mmhal,amber"  --infer_batch_size 12 --MODEL_NAME "llava-hf/llava-1.5-7b-hf" --temperature 0.0 
